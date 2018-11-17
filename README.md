@@ -17,10 +17,10 @@ How to use avrdue to write firmware to Arduino
 ### ARDUINO UNO
 avrdude -v -c arduino -p m328p -P /dev/ttyACM0 -b 115200
 
-### ARDUINO MEGA 256 ***
+### ARDUINO MEGA 256
 avrdude -v -c wiring -p m2560 -P /dev/ttyACM0 -b 115200
 
-### avrdude & roborobo ISP fro Arduino boards (based on avrisp2 사용)
+### avrdude & roborobo ISP fro Arduino boards (based on avrisp2)
 
 I bought USB/ISP[SR0M-N003] in the RoboRobo web store, but it was not compatible with the avrdude. I changed avrdude source code like this git repo and successfuly read and wrote data from/to arduino boards with that one.
 When you write data to arduino boards, you should select the "avrisp2".
