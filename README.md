@@ -36,7 +36,9 @@ pgm->read_byte = stk500isp_read_byte;
 pgm->write_byte = stk500isp_write_byte;
 ```
 
-(The below is additional information in Korean)
+Additional information in Korean
+---------------------------------------------
+
 필요하신 분에게 도움이 될 수 있도록 정보 공유합니다.
 (제가 USB/ISP[SR0M-N003]의 내부 동작 로직을 알 수 없기에, 문제 없이 완벽히 동작하는 지는 알 수 없습니다...^^)
 
