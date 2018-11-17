@@ -4390,8 +4390,8 @@ static void stk600_setup_isp(PROGRAMMER * pgm)
 {
     pgm->program_enable = stk500v2_program_enable;
     pgm->disable = stk500v2_disable;
-    pgm->read_byte = avr_read_byte_default;
-    pgm->write_byte = avr_write_byte_default;
+    pgm->read_byte = stk500isp_read_byte; //sdmo
+    pgm->write_byte = stk500isp_write_byte; //sdmo
     pgm->paged_load = stk500v2_paged_load;
     pgm->paged_write = stk500v2_paged_write;
     pgm->page_erase = stk500v2_page_erase;
@@ -4416,8 +4416,10 @@ void stk500v2_initpgm(PROGRAMMER * pgm)
   pgm->cmd            = stk500v2_cmd;
   pgm->open           = stk500v2_open;
   pgm->close          = stk500v2_close;
-  pgm->read_byte      = avr_read_byte_default;
-  pgm->write_byte     = avr_write_byte_default;
+  pgm->read_byte      = stk500isp_read_byte; //sdmo
+  pgm->write_byte     = stk500isp_write_byte; //sdmo
+  //  pgm->read_byte      = avr_read_byte_default;
+  //  pgm->write_byte     = avr_write_byte_default;
 
   /*
    * optional functions

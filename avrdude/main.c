@@ -1024,9 +1024,11 @@ int main(int argc, char * argv [])
    * against 0xffffff / 0x000000 should ensure that the signature bytes
    * are valid.
    */
+
+
   if(!(p->flags & AVRPART_AVR32)) {
     int attempt = 0;
-    int waittime = 10000;       /* 10 ms */
+    int waittime = 10000;       // 10 ms
 
   sig_again:
     usleep(waittime);
@@ -1108,6 +1110,7 @@ int main(int argc, char * argv [])
       }
     }
   }
+
 
   if (init_ok && safemode == 1) {
     /* If safemode is enabled, go ahead and read the current low, high,

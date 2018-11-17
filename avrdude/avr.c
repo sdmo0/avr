@@ -427,9 +427,13 @@ int avr_read(PROGRAMMER * pgm, AVRPART * p, char * memtype,
           strcasecmp(mem->desc, "application") == 0 ||
           strcasecmp(mem->desc, "apptable") == 0 ||
           strcasecmp(mem->desc, "boot") == 0)
-        return avr_mem_hiaddr(mem);
+	{
+	  return avr_mem_hiaddr(mem);
+	}
       else
-        return mem->size;
+	{
+	  return mem->size;
+	}
     }
     /* else: fall back to byte-at-a-time write, for historical reasons */
   }
